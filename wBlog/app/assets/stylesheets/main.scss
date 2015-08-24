@@ -91,6 +91,10 @@ body{
 	width:100%;
 }
 
+.imgpost {
+	padding-bottom: 10px;
+}
+
 .post-content{
 	padding:20px;
 	box-sizing:border-box;
@@ -101,12 +105,17 @@ body{
 	padding:0;
 }
 
-.post small{
+small{
 	background:$primary-color;
 	color:#fff;
 	display:block;
 	margin:10px 0;
 	padding:5px 10px;
+}
+
+.post .btn {
+	display: block;
+	margin-top: 10px;
 }
 
 footer{
