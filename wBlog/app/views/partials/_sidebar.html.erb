@@ -1,6 +1,20 @@
+<!-- Show category listings -->
+
+<% if params[:controller] == 'posts' || params[:controller] == 'categories' %>
+	<div class="list-group">
+		<% @categories.each do |category| %>
+			<%= link_to category.name, category_path(category.id), class:'list-group-item' %>
+		<% end %>
+	</div>
+<% end %>
+
+
+<!-- Static sidebar links -->
+<!--
 <div class="list-group">
   <a href="#" class="list-group-item text-center">Link 1</a>
   <a href="#" class="list-group-item text-center">Link 2</a>
   <a href="#" class="list-group-item text-center">Link 3</a>
   <a href="#" class="list-group-item text-center">Link 4</a>
 </div>
+-->
