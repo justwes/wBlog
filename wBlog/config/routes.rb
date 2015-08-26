@@ -109,12 +109,16 @@ Rails.application.routes.draw do
 
   get 'posts/show'
 
-  resources :posts, :categories, :comments
+  resources :posts, :categories
 
   resources "contacts", only: [:new, :create]
 
+  resources :posts do
+    resources :comments
+  end
+
   namespace :admin do
-    resources :posts, :categories, :comments, :users
+    resources :posts, :categories, :comments, :users, :sessions
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

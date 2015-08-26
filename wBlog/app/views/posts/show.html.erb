@@ -4,3 +4,5 @@
   <%= image_tag @post.image.url,width: '100%', :class => 'imgpost' %>
   <%= raw @post.body %>
 </div>
+
+<%= render 'partials/comments' %>
